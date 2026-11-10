@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="la" data-type="software" data-radius="soft" data-ground="sand" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://08.design-test.dokuline.com/">
+<title>Layout 08 — design test</title>
+<meta name="description" content="Design test 08">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="taste/system.css">
+<link rel="stylesheet" href="taste/cards.css">
+<link rel="stylesheet" href="taste/motion.css">
+<link rel="stylesheet" href="taste/layout.css">
+<link rel="stylesheet" href="taste/ui/base.css">
+<link rel="stylesheet" href="taste/ui/checklist/fragment.css">
+<link rel="stylesheet" href="taste/ui/search/fragment.css">
+<link rel="stylesheet" href="taste/ui/notify/fragment.css">
+<link rel="stylesheet" href="taste/ui/calendar/fragment.css">
+<link rel="stylesheet" href="taste/ui/window/fragment.css">
+<link rel="stylesheet" href="taste/ui/doc/fragment.css">
+<link rel="stylesheet" href="variant.css">
+</head>
+<body>
+<div style="position:relative;z-index:9999;display:flex;gap:16px;justify-content:center;align-items:center;padding:6px 12px;background:#05080b;color:#fff;font:600 13px/1.4 Inter,system-ui,sans-serif"><a href="https://07.design-test.dokuline.com/" style="color:#b1ddff;text-decoration:none">← 07</a><span>Layout 08 / 21</span><a href="https://09.design-test.dokuline.com/" style="color:#b1ddff;text-decoration:none">09 →</a></div>
+<!-- type: software (site-kind software)
+     deal: hero word; palette: the smokes' house colours, font Inter, light everywhere (brief 4; :root in variant.css); radius soft;
+     buttons solid; ground sand (its tokens set light in variant.css); nav plain bar; rhythm surface-pairs; close type; footer columns; mark wordmark;
+     moment: liquid type on the close headline. Library: taste/ (system, cards, motion, layout, ui fragments),
+     unchanged copies; no library scripts. -->
+
+<div class="nav" role="banner">
+  <div class="wrap nav__bar">
+    <a class="nav__logo" href="#" data-ev="click_logo_home">Lorem Ipsum</a>
+    <nav class="nav__links" aria-label="Et">
+      <div class="nav__item"><a class="nav__link" href="#what" data-ev="click_nav_what">Dolor sit</a></div>
+      <div class="nav__item"><a class="nav__link" href="#" data-ev="click_nav_price">Amet</a></div>
+      <div class="nav__item"><a class="nav__link" href="#example" data-ev="click_nav_example">Consectetur</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#start" data-ev="click_nav_start">Incipe</a>
+    </div>
+  </div>
+</div>
+
+<script>(function(){var b=document.body.firstElementChild,n=document.querySelector(".nav");if(!n)return;function f(){n.style.top=Math.max(0,b.offsetHeight-window.scrollY)+"px"}f();addEventListener("scroll",f,{passive:true});addEventListener("resize",f)})();</script>
+<main id="top">
+  <section class="hero hero--word" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <h1 id="hero-h">Lorem ipsum dolor sit amet, consectetur adipiscing <span class="ly-word" data-words="elit|amet|dolor"><span>elit</span></span></h1>
+      <div class="grid hero__foot">
+        <div class="span-6 stack-4">
+          <p class="hero__lead">Ut enim ad minim veniam, <b>quis nostrud exercitation</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          <div class="btn-row"><a class="btn btn--primary" href="#" data-ev="cta_click">Lorem ipsum<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+          <p class="t-small muted">Excepteur sint occaecat · Cupidatat non proident sunt in culpa</p>
+        </div>
+        <dl class="hero__facts hero__facts--col span-5 start-8">
+          <div><dt>Lorem</dt><dd>Ipsum dolor sit amet</dd></div>
+          <div><dt>Dolor</dt><dd>Consectetur adipiscing</dd></div>
+          <div><dt>Amet</dt><dd>Sed do eiusmod</dd></div>
+          <div><dt>Elit</dt><dd>Tempor incididunt</dd></div>
+        </dl>
+      </div>
+    </div></div>
+  </section>
+
+  <section id="what" class="ground-surface g2" data-view="features_view" aria-labelledby="what-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="what-h">Dolor sit amet. <span class="muted">Consectetur adipiscing elit sed do.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="tile span-6">
+            <div class="panel">
+              <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:340px;--ay:32px">
+                <div class="ui ui-panel ui-checks" data-ui="checklist">
+                  <div class="ui-checks__head"><div class="ui-title">Dolore magna aliqua</div><span class="ui-spacer"></span><div class="ui-meta">magna</div></div>
+                  <div class="ui-checks__bar"><i style="--k:0.8"></i></div>
+                  <ul class="ui-checks__list">
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Aliqua lorem ipsum</span></li>
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Lorem ipsum dolor sit amet</span></li>
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Ipsum dolor sit amet</span></li>
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Dolor sit amet</span></li>
+                    <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Sit amet consectetur</span></li>
+                  </ul>
+                </div>
+              </div></div>
+            </div>
+            <div class="tile__head"><h3>Lorem ipsum</h3></div>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="btn-row"><a class="btn btn--secondary" href="#" data-ev="feature_visit">Lorem ipsum</a></div>
+          </article>
+          <article class="tile span-6">
+            <div class="panel">
+              <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:380px;--ay:32px">
+                <div class="ui ui-panel ui-search" data-ui="search">
+                  <div class="ui-search__field">
+                    <svg class="ui-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+                    <span class="ui-search__q"><span>amet consectetur</span><i class="ui-search__caret"></i></span>
+                    <kbd class="ui-search__kbd">Consec</kbd>
+                  </div>
+                  <div class="ui-search__group">Adipiscing</div>
+                  <ul class="ui-search__list">
+                    <li class="ui-search__row is-sel"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M9 2.5v3h3"/></svg></span><span class="ui-search__t"><b>Elit sed do</b>sed do eiusmod tempor</span><span class="ui-search__m">Do eiusmod</span></li>
+                    <li class="ui-search__row"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M9 2.5v3h3"/></svg></span><span class="ui-search__t"><b>Eiusmod tempor</b>tempor incididunt</span><span class="ui-search__m">Incididunt</span></li>
+                    <li class="ui-search__row"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M9 2.5v3h3"/></svg></span><span class="ui-search__t">Ut labore et dolore magna aliqua</span><span class="ui-search__m">Labore et</span></li>
+                  </ul>
+                  <div class="ui-search__foot"><span>Et dolore magna aliqua lorem</span></div>
+                </div>
+              </div></div>
+            </div>
+            <div class="tile__head"><h3>Dolor sit amet</h3></div>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="btn-row"><a class="btn btn--secondary" href="#" data-ev="feature_chemical">Lorem ipsum</a></div>
+          </article>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="tile span-6">
+          <div class="panel">
+            <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:380px;--ay:32px">
+              <div class="ui ui-notify" data-ui="notify">
+                <ul class="ui-notify__list">
+                  <li class="ui-note"><span class="ui-avatar ui-note__av" data-tone="2">DM</span><span class="ui-note__text"><span class="ui-note__title">Magna aliqua lorem ipsum<time>ali</time></span><span class="ui-note__body">Lorem ipsum dolor sit amet</span></span><span class="ui-btn ui-btn--sm ui-note__btn">Ipsum</span></li>
+                  <li class="ui-note"><span class="ui-note__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg></span><span class="ui-note__text"><span class="ui-note__title">Dolor sit amet<time>2m</time></span><span class="ui-note__body">Sit amet consectetur</span></span></li>
+                  <li class="ui-note"><span class="ui-avatar ui-note__av" data-tone="4">AC</span><span class="ui-note__text"><span class="ui-note__title">Consectetur adipiscing elit sed<time>1h</time></span><span class="ui-note__body">Adipiscing elit sed do eiusmod</span></span></li>
+                </ul>
+              </div>
+            </div></div>
+          </div>
+          <div class="tile__head"><h3>Consectetur elit</h3></div>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <div class="btn-row"><a class="btn btn--secondary" href="#" data-ev="feature_invoice">Lorem ipsum</a></div>
+        </article>
+        <article class="tile span-6">
+          <div class="panel">
+            <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:380px;--ay:32px">
+              <div class="ui ui-panel ui-calendar" data-ui="calendar">
+                <div class="ui-cal__head">
+                  <div class="ui-cal__month">Elit <span>sed do</span></div>
+                  <span class="ui-spacer"></span>
+                  <span class="ui-chip ui-chip--plain ui-chip--ink">do eiusmod</span>
+                </div>
+                <div class="ui-cal__events">
+                  <div class="ui-cal__ev is-now">
+                    <span class="ui-cal__date"><b>Ei</b><i>tem</i></span>
+                    <span class="ui-cal__evtext"><span class="ui-cal__evtitle">Incididunt</span><span class="ui-cal__evsub">Ut labore et dolore</span></span>
+                  </div>
+                  <div class="ui-cal__ev">
+                    <span class="ui-cal__date"><b>La</b><i>et</i></span>
+                    <span class="ui-cal__evtext"><span class="ui-cal__evtitle">Dolore</span><span class="ui-cal__evsub">Magna aliqua lorem</span></span>
+                  </div>
+                  <div class="ui-cal__ev">
+                    <span class="ui-cal__date"><b>Al</b><i>lorem</i></span>
+                    <span class="ui-cal__evtext"><span class="ui-cal__evtitle">Ipsum dolor</span><span class="ui-cal__evsub">Dolor sit amet consectetur</span></span>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+          <div class="tile__head"><h3>Sed do eiusmod</h3></div>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <div class="btn-row"><a class="btn btn--secondary" href="#" data-ev="feature_route">Lorem ipsum</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="example" data-view="example_view" aria-labelledby="example-h">
+    <div class="wrap">
+      <div class="grid">
+        <div class="span-5"><h2 id="example-h">Consectetur adipiscing. <span class="muted">Lorem ipsum dolor.</span></h2></div>
+        <div class="span-6 start-7 stack-4">
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="link" href="#" data-ev="click_cta_after_example">Dolor sit amet</a>
+        </div>
+      </div>
+      <div class="ui app fill" role="img" aria-label="Sit amet consectetur adipiscing elit sed">
+        <div class="app__pane app__pane--list" aria-hidden="true">
+          <div class="ui ui-panel ui-win" data-ui="window">
+            <div class="ui-win__bar">
+              <span class="ui-dots"><i></i><i></i><i></i></span>
+              <span class="ui-win__crumb">Amet <i>/</i> <b>Consect</b></span>
+              <span class="ui-spacer"></span>
+              <span class="ui-win__search"><svg class="ui-icon" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg><span class="ui-win__ph">Adipis</span><span class="ui-kbd">/</span></span>
+            </div>
+            <div class="ui-win__body">
+              <div class="ui-win__side">
+                <span class="ui-win__nav is-on"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M2.5 9h3l1 1.5h3l1-1.5h3"/><path d="M2.5 9 4 3.5h8L13.5 9v3.5h-11z"/></svg>Elit<em>14</em></span>
+                <span class="ui-win__nav"><svg class="ui-icon" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><path d="M8 5v3l2 1.5"/></svg>Sed<em>3</em></span>
+                <span class="ui-win__nav"><svg class="ui-icon" viewBox="0 0 16 16"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg>Do</span>
+                <span class="ui-win__label">Eiusm</span>
+                <span class="ui-win__nav"><span class="ui-win__hash">#</span>Tempor</span>
+                <span class="ui-win__nav"><span class="ui-win__hash">#</span>Incididu</span>
+              </div>
+              <div class="ui-win__main">
+                <div class="ui-win__cols"><span>Ut</span><span>Labore</span><span>Et</span><span>Dol.</span></div>
+                <ul class="ui-win__rows">
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="1">MA</span><span class="ui-win__who">Aliqua lorem</span><span class="ui-win__sub">Lorem ipsum dolor</span><span class="ui-win__st is-done">Ipsum</span><span class="ui-win__age">5</span></li>
+                  <li class="ui-win__row is-sel"><span class="ui-avatar" data-tone="3">DS</span><span class="ui-win__who">Sit amet</span><span class="ui-win__sub">Amet consectetur</span><span class="ui-win__st is-you">Consecte</span><span class="ui-win__age">6</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="4">AE</span><span class="ui-win__who">Elit sed do</span><span class="ui-win__sub">Sed do eiusmod tempor</span><span class="ui-win__st">Do</span><span class="ui-win__age">7</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="2">ET</span><span class="ui-win__who">Tempor</span><span class="ui-win__sub">Incididunt ut</span><span class="ui-win__st">Ut</span><span class="ui-win__age">8</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="5">LE</span><span class="ui-win__who">Et dolore magna</span><span class="ui-win__sub">Dolore magna</span><span class="ui-win__st">Mag</span><span class="ui-win__age">9</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="1">AL</span><span class="ui-win__who">Lorem ipsum</span><span class="ui-win__sub">Ipsum dolor</span><span class="ui-win__st">Dol</span><span class="ui-win__age">10</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="3">SA</span><span class="ui-win__who">Amet</span><span class="ui-win__sub">Consectetur adipiscing</span><span class="ui-win__st">Adi</span><span class="ui-win__age">11</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="4">ES</span><span class="ui-win__who">Sed do eiusmod</span><span class="ui-win__sub">Do eiusmod tempor</span><span class="ui-win__st">Eiu</span><span class="ui-win__age">12</span></li>
+                  <li class="ui-win__row"><span class="ui-avatar" data-tone="2">TI</span><span class="ui-win__who">Incididunt</span><span class="ui-win__sub">Ut labore et dolore</span><span class="ui-win__st">Lab</span><span class="ui-win__age">13</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app__pane app__pane--open" aria-hidden="true">
+          <div class="ui ui-doc" data-ui="doc">
+            <article class="ui-doc__page">
+              <div class="ui-doc__label">Et dolore magna aliqua lorem ipsum dolor sit</div>
+              <div class="ui-doc__title">Dolore magna aliqua lorem</div>
+              <div class="ui-doc__text">Magna aliqua lorem ipsum dolor sit amet consectetur adipiscing.</div>
+              <div class="ui-doc__text">Aliqua lorem ipsum dolor <mark class="ui-doc__mark is-on">lorem</mark>ipsum dolor sit amet consectetur.</div>
+              <div class="ui-doc__text">Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.</div>
+              <div class="ui-doc__text">Sit amet consectetur adipiscing elit sed do.</div>
+              <div class="ui-doc__text">Amet consectetur adipiscing elit sed do eiusmod tempor.</div>
+            </article>
+            <aside class="ui-doc__note ui-panel is-on">
+              <div class="ui-doc__kind"><span class="ui-doc__dot"></span><span>Consectetur</span></div>
+              <div class="ui-doc__msg">Adipiscing elit sed do eiusmod tempor.</div>
+              <div class="ui-doc__where">Elit sed do</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- seo-tekst:start -->
+  <section id="opis" class="ground-surface g2" aria-labelledby="opis-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="opis-h">Sed ut perspiciatis unde</h2>
+        </div>
+        <div class="grid">
+          <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p class="span-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+    </div>
+  </section>
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid">
+      <div class="section-head span-5">
+        <h2 id="faq-h">Quis autem vel eum</h2>
+      </div>
+      <div class="faq span-6 start-7">
+        <div class="faq__item"><h3>Neque porro quisquam est qui dolorem?</h3><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p></div>
+        <div class="faq__item"><h3>Neque porro quisquam est qui dolorem?</h3><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p></div>
+        <div class="faq__item"><h3>Neque porro quisquam est qui dolorem?</h3><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p></div>
+        <div class="faq__item"><h3>Neque porro quisquam est qui dolorem?</h3><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p></div>
+        <div class="faq__item"><h3>Neque porro quisquam est qui dolorem?</h3><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p></div>
+      </div>
+    </div>
+  </section>
+<!-- seo-tekst:end -->
+  <section id="start" class="ground-surface" data-view="start_view" aria-labelledby="start-h">
+    <div class="wrap">
+      <div class="closing__cta close--type">
+        <div class="section-head">
+          <h2 id="start-h" data-liquid>At vero eos et accusamus.</h2>
+          <p>Et iusto odio dignissimos ducimus qui blanditiis.</p>
+        </div>
+        <div class="grid">
+          <div class="field span-6"><label for="f-stops">Lorem ipsum dolor</label><select id="f-stops" data-ev-focus="form_start"><option value="">— lorem —</option><option>Ipsum I</option><option>Ipsum II</option><option>Ipsum III</option><option>Ipsum IV</option></select></div>
+        </div>
+        <a class="btn btn--primary btn--xl btn--wide" href="#" data-ev="form_submit_click">Incipe<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+    </div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <filter id="liquid" x="-5%" y="-10%" width="110%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
+  </section>
+</main>
+
+<div class="footer ground-surface" role="contentinfo">
+  <div class="wrap">
+    <div class="grid">
+      <p class="footer__mark span-4">Lorem Ipsum</p>
+      <p class="span-6 start-7">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p>
+    </div>
+    <div class="footer__legal"><a href="#" data-ev="click_legal_privacy">Privacy</a></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still) return;
+  /* the hero's one entrance (taste motion.css): hold the words, then let them fade in */
+  var de = document.documentElement;
+  de.classList.add('m-enter');
+  void de.offsetWidth;
+  requestAnimationFrame(function () { requestAnimationFrame(function () { de.classList.add('m-enter-done'); }); });
+  /* the live word: two rounds, then it rests on the first word */
+  var w = document.querySelector('.ly-word');
+  if (w) {
+    var words = w.getAttribute('data-words').split('|'), cur = w.firstElementChild, i = 0, steps = words.length * 2;
+    for (var k = 1; k < words.length; k++) { var s = document.createElement('span'); s.textContent = words[k]; s.className = 'is-next'; s.setAttribute('aria-hidden', 'true'); w.appendChild(s); }
+    var spans = w.children;
+    var t = setInterval(function () {
+      var next = spans[(i + 1) % spans.length];
+      spans[i % spans.length].className = 'is-out';
+      next.className = '';
+      i++;
+      setTimeout(function () { for (var j = 0; j < spans.length; j++) if (spans[j] !== next) spans[j].className = 'is-next'; }, 650);
+      if (i >= steps) clearInterval(t);
+    }, 2200);
+  }
+  /* liquid type: the close headline ripples where the pointer crosses it and settles within a second */
+  var h = document.querySelector('[data-liquid]'), f = document.getElementById('liquid');
+  if (h && f && matchMedia('(hover: hover)').matches) {
+    var map = f.querySelector('feDisplacementMap'), turb = f.querySelector('feTurbulence'), amt = 0, raf = 0;
+    var tick = function () {
+      amt *= 0.9;
+      map.setAttribute('scale', amt.toFixed(1));
+      if (amt > 0.3) raf = requestAnimationFrame(tick); else { amt = 0; raf = 0; h.style.filter = ''; }
+    };
+    h.addEventListener('pointermove', function (e) {
+      var r = h.getBoundingClientRect();
+      turb.setAttribute('baseFrequency', (0.008 + 0.01 * (e.clientX - r.left) / r.width).toFixed(4) + ' ' + (0.02 + 0.02 * (e.clientY - r.top) / r.height).toFixed(4));
+      amt = Math.min(28, amt + 4);
+      h.style.filter = 'url(#liquid)';
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+  }
+})();
+</script>
+</body>
+</html>
