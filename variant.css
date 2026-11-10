@@ -30,7 +30,7 @@
 
 /* 3. page CSS. The feature tiles' panel height (system.md: one --p-h per card group; the phone's 180px is
    system.css's), and the app-frame recipe (sections-library.md, app-frame), as written there */
-#what .panel { --p-h: 240px; }
+#what .panel { --p-h: 320px; }   /* brief 6: 320 (was 240), so a 4:3 picture is cropped less */
 /* design test (brief 5): the lorem headline runs four lines at 144px, so the one-screen hero grows with it
    (the same release system.css gives it on small screens) instead of sliding under the header */
 main > .hero--word { height: auto; min-height: 100vh; min-height: 100svh; }
@@ -53,3 +53,13 @@ main > .hero--word { height: auto; min-height: 100vh; min-height: 100svh; }
   .app > .app__pane--list { display: none; }
   .app > .app__pane + .app__pane { border-top: 0; }
 }
+
+/* 4. design test (brief 6): the same content on every layout. The eyebrow over the headline, the hero picture
+   under the foot row (3:2, the kit's photo frame), the example picture in the app-frame's place */
+.hero--word .hero__in > .hero__kicker { margin-bottom: var(--s-4); }
+.hero--word .hero__pic { --ratio: 66.667%; margin-top: var(--s-8); }
+#example .example__pic { margin-top: var(--s-7); }
+/* the example picture keeps the app-frame's wide box: the crop is taken from the picture's upper part */
+#example .example__pic > img { object-position: 50% 25%; }
+/* the static headline (no live word) breaks between words, never inside one */
+.hero--word h1 { hyphens: manual; }
