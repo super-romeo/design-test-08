@@ -3,16 +3,16 @@
 
 :root {
   /* colour — smokes' house palette (СМ-04); one blue accent, white text passes AA */
-  --canvas: #f9f6f0;                    /* page */
-  --surface: #fffdf9;                   /* cards */
-  --ink: #16140f;                       /* text */
-  --steel: #6a6558;                     /* secondary text */
-  --line: #e2dccf;                      /* borders */
-  --border: #e2dccf;                    /* borders on cards */
-  --accent: #1f5a3d;
-  --accent-ink: #1f5a3d;
-  --accent-wash: #e2eddc;
-  --focus: #2f8a5c;
+  --canvas: #fbfcfd;                    /* page */
+  --surface: #ffffff;                   /* cards */
+  --ink: #0a1524;                       /* text */
+  --steel: #566174;                     /* secondary text */
+  --line: #dde2ea;                      /* borders */
+  --border: #dde2ea;                    /* borders on cards */
+  --accent: #12397a;
+  --accent-ink: #12397a;
+  --accent-wash: #dfe8f7;
+  --focus: #2f6fd6;
   --shadow: 0 20px 40px -15px rgba(0, 0, 0, .05);  /* Diffused Shadow */
   /* type — one family, Inter */
   --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
@@ -68,7 +68,7 @@ section > * + * { margin-top: clamp(2rem, 4vw, 3rem); }
 .bento > .wide { grid-column: span 7; }
 
 /* header, footer (also replace the shared base: white header, navy footer) */
-header { position: sticky; top: 0; z-index: 10; background: rgba(249, 246, 240, .86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+header { position: sticky; top: 0; z-index: 10; background: rgba(251, 252, 253, .86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 header .shell { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 64px; }
 header nav { display: flex; flex-wrap: wrap; }
 header a { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 .75rem; border-radius: var(--radius-pill); color: var(--steel); text-decoration: none; transition: background-color var(--dur) var(--spring), color var(--dur) var(--spring); }
@@ -130,3 +130,156 @@ select { width: 100%; min-width: 0; min-height: 52px; padding: 0 1rem; font: inh
 }
 
 
+
+/* ===== Background 06: Grey alternating + dark form block and footer ===== */
+#wat, #opis { --band: #eef2f7; box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); background: var(--band); border-top-color: transparent; }
+#wat + section, #opis + section { border-top-color: transparent; }
+#start { --band: #0d2247; --ink: #ffffff; --steel: #c3cee2; --line: rgba(255,255,255,.18); --border: rgba(255,255,255,.16);
+  --surface: #17315f; --accent-wash: rgba(255,255,255,.12); --focus: #9dbcf5; color: var(--ink); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); background: var(--band); border-top-color: transparent; }
+#start .button:not(.quiet) { background: #fff; border-color: #fff; color: #12397a; }
+#start .button.quiet { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+#start select { background-color: #17315f; color: #fff; border-color: rgba(255,255,255,.3); }
+#start + section { border-top-color: transparent; }
+footer { background: #0d2247; color: #fff; border-top: 0; --ink: #fff; --steel: #c3cee2; }
+footer a, footer p { color: #fff; }
+
+/* ===== v2 fixes after jury: form card light inside the dark block; footer separated from the form block ===== */
+#start .tile { --ink: #0a1524; --steel: #566174; --line: #dde2ea; --border: #dde2ea; --surface: #ffffff; --focus: #2f6fd6; background: #ffffff; color: #0a1524; border-color: transparent; }
+#start .tile select { background-color: #ffffff; color: #0a1524; border-color: #b9c3d2; }
+#start .tile .button:not(.quiet) { background: #12397a; border-color: #12397a; color: #ffffff; }
+footer { background: #081833; border-top: 1px solid rgba(255,255,255,.14); }
+/* ===== Shape 02: Medium radius, rounded-rectangle buttons ===== */
+:root { --radius-card: 1rem; --radius-inner: .75rem; --radius-field: .625rem; --radius-pill: .625rem; }
+header a { border-radius: var(--radius-field); }
+
+/* ===== Cards 05: Grid 2x2, picture on the side ===== */
+.art { height: auto; aspect-ratio: 4 / 3; }
+@media (min-width: 768px) {
+.bento > *, .bento > .wide { grid-column: span 6; }
+#wat .tile { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); column-gap: 1.5rem; align-items: center; }
+#wat .tile .art { grid-row: 1 / span 3; }
+#wat .tile > :not(.art) { grid-column: 2; }
+#wat .tile { padding: 1.5rem; }
+}
+
+/* ===== v5: first screen 07 — picture in a window frame (three dots in the bar, lighter shadow) ===== */
+.window { margin: 0; align-self: center; overflow: hidden; background: var(--surface); border: 1px solid #c9d2e0; border-radius: var(--radius-inner);
+  box-shadow: 0 24px 48px -26px rgba(10, 21, 36, .30), 0 2px 6px rgba(10, 21, 36, .06); }
+.window::before { content: ""; display: block; height: 30px; border-bottom: 1px solid #d5dbe6;
+  background: radial-gradient(circle at 16px 15px, #b9c3d2 4px, transparent 5px), radial-gradient(circle at 32px 15px, #b9c3d2 4px, transparent 5px),
+    radial-gradient(circle at 48px 15px, #b9c3d2 4px, transparent 5px), #e9edf3; }
+.window .shot { border: 0; border-radius: 0; box-shadow: none; }
+/* ===== Density 02: Compact: smaller gaps between blocks ===== */
+@media (min-width: 768px) {
+:root { --section: 4rem; --gap: clamp(1.5rem, 3.5vw, 3.5rem); --pad-card: 1.75rem; }
+}
+
+/* ===== Header 07: Button in header; light grey footer ===== */
+header nav a:last-child { background: var(--accent); color: #fff; padding: 0 1rem; margin-left: .5rem; font-weight: 600; }
+header nav a:last-child:hover { background: var(--accent); color: #fff; opacity: .92; }
+@media (max-width: 767px) {
+header .shell { position: relative; }
+header nav a:last-child { position: absolute; top: 10px; right: var(--gutter); margin: 0; }
+}
+footer { background: #eef2f7; color: #0a1524; --ink: #0a1524; --steel: #566174; border-top: 1px solid #dde2ea; }
+footer a, footer p { color: #0a1524; }
+
+/* ===== v7: header button aligned with the name row on phones (jury defect) ===== */
+@media (max-width: 767px) {
+  header .shell { min-height: 0; padding-top: 6px; padding-bottom: 4px; row-gap: 0; }
+  header .home { min-height: 40px; }
+  header nav a:last-child { top: 6px; min-height: 40px; }
+}
+/* ===== Motion 04: Load cascade only, no reveal on scroll, static dot ===== */
+.reveal, .dot, .skel { animation: none !important; }
+
+/* ===== Commands 08: Emil: design-eng details ===== */
+
+/* ===== command: emil-design-eng ===== */
+/* Tokens first (СМ-45): the old rules read --dur / --spring, so they pick the new timing up by themselves. */
+:root {
+  --ease-out: cubic-bezier(.23, 1, .32, 1);      /* strong ease-out: entering, press */
+  --spring: var(--ease-out);                      /* was cubic-bezier(.2,.9,.25,1) */
+  --dur: .15s;                                    /* hover / colour; was .6s (UI stays under 300ms) */
+  --dur-press: .16s;                              /* press feedback, 100–160ms */
+  --dur-rise: .5s;                                /* first-screen cascade item; was .9s */
+  --stagger: 60ms;                                /* was 100ms (30–80ms between items) */
+  --press: .97;                                   /* was translateY(1px) scale(.98) */
+  --header-h: 65px;                               /* sticky header incl. its border; 95px on phones */
+  --accent-hover: var(--accent);
+}
+@supports (color: color-mix(in srgb, red, blue)) {
+  :root { --accent-hover: color-mix(in srgb, var(--accent) 84%, var(--ink)); }  /* same hue, darker: hover used to be a no-op */
+}
+
+/* text rendering */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: var(--header-h); }
+body { -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-synthesis: none; }
+p, dd { text-wrap: pretty; }
+h1, h2, h3, p, dd { overflow-wrap: break-word; }
+a { text-decoration-thickness: from-font; text-underline-offset: .2em; }
+::selection { background: var(--accent-wash); color: var(--ink); }
+
+/* anchors land exactly under the sticky header (was a fixed 64px, 31px short on phones) */
+section { scroll-margin-top: 0; }
+header { -webkit-backdrop-filter: blur(12px); }
+
+/* pressables: exact properties, colour on `ease`, press on strong ease-out, no tap flash, no text selection */
+header a, .button, footer a, select, label { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+header a, .button { -webkit-user-select: none; user-select: none; }
+header a { transition: background-color var(--dur) ease, color var(--dur) ease, transform var(--dur-press) var(--ease-out); }
+.button { transition: transform var(--dur-press) var(--ease-out), background-color var(--dur) ease, border-color var(--dur) ease; }
+.button::after { transition: transform var(--dur-press) var(--ease-out); }
+footer a { transition: color var(--dur) ease; }
+.button:active, header nav a:last-child:active { transform: scale(var(--press)); }
+header a:active { color: var(--ink); }
+header nav a:last-child:active { color: #fff; }
+header nav a:last-child:hover { opacity: 1; }
+header .home { margin-left: -.75rem; padding-left: .75rem; }   /* hover plate and focus ring no longer hug the first letter */
+select, label { cursor: pointer; }
+select { accent-color: var(--accent); }
+
+/* hover only where there is a real pointer; a tap must not leave a stuck hover */
+@media not all and (hover: hover) and (pointer: fine) {
+  header a:hover { background: transparent; }
+  header nav a:hover { color: var(--steel); }
+  .button.quiet:hover { border-color: var(--line); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:not(.quiet):hover, #start .tile .button:not(.quiet):hover, header nav a:last-child:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  header nav a:last-child:hover { border-color: transparent; }
+  footer a:hover { color: var(--accent); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button:hover::after { transform: translateX(2px); }
+}
+
+/* focus: one ring everywhere, never animated, visible on the accent button too */
+:focus-visible, select:focus { outline-offset: 3px; }
+select:focus:not(:focus-visible) { outline: 0; }
+
+/* images: reserved box, quiet placeholder, hairline edge so pale pictures do not melt into the card */
+img { max-width: 100%; background-color: var(--accent-wash); -webkit-user-drag: none; }
+.art img, .shot { outline: 1px solid rgba(10, 21, 36, .08); outline-offset: -1px; }
+.art img { border-radius: inherit; }
+.window .shot { outline: 0; }
+
+/* 44px hit area for the name and the header button on phones without changing the 40px look */
+@media (max-width: 767px) {
+  :root { --header-h: 95px; }
+  header .home { position: relative; }
+  header .home::before, header nav a:last-child::before { content: ""; position: absolute; inset: -4px 0 0; }
+}
+
+/* first-screen cascade: shorter, tighter, smaller travel; `backwards` so nothing keeps holding transform afterwards */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } }
+  .rise { animation: rise-in var(--dur-rise) var(--ease-out) calc(var(--i, 0) * var(--stagger)) backwards; }
+}
+/* reduced motion: gentler, not zero — opacity only, no travel, no smooth scroll, no arrow nudge */
+@media (prefers-reduced-motion: reduce) {
+  @keyframes fade-in { from { opacity: 0; } }
+  html { scroll-behavior: auto; }
+  .rise { animation: fade-in .2s ease backwards; }
+  .button:active, header nav a:last-child:active { transform: none; }
+}
