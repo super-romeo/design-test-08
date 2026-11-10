@@ -3,16 +3,16 @@
 
 :root {
   /* colour — smokes' house palette (СМ-04); one blue accent, white text passes AA */
-  --canvas: #fcfcfc;                    /* page */
-  --surface: #ffffff;                   /* cards */
-  --ink: #05080b;                       /* text */
-  --steel: #5c646f;                     /* secondary text */
-  --line: #dfe1e5;                      /* borders */
-  --border: #dfe1e5;                    /* borders on cards */
-  --accent: #006acf;
-  --accent-ink: #006acf;
-  --accent-wash: #d6efff;
-  --focus: #0086dd;
+  --canvas: #f9f6f0;                    /* page */
+  --surface: #fffdf9;                   /* cards */
+  --ink: #16140f;                       /* text */
+  --steel: #6a6558;                     /* secondary text */
+  --line: #e2dccf;                      /* borders */
+  --border: #e2dccf;                    /* borders on cards */
+  --accent: #1f5a3d;
+  --accent-ink: #1f5a3d;
+  --accent-wash: #e2eddc;
+  --focus: #2f8a5c;
   --shadow: 0 20px 40px -15px rgba(0, 0, 0, .05);  /* Diffused Shadow */
   /* type — one family, Inter */
   --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
@@ -68,7 +68,7 @@ section > * + * { margin-top: clamp(2rem, 4vw, 3rem); }
 .bento > .wide { grid-column: span 7; }
 
 /* header, footer (also replace the shared base: white header, navy footer) */
-header { position: sticky; top: 0; z-index: 10; background: rgba(252, 252, 252, .86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+header { position: sticky; top: 0; z-index: 10; background: rgba(249, 246, 240, .86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 header .shell { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 64px; }
 header nav { display: flex; flex-wrap: wrap; }
 header a { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; padding: 0 .75rem; border-radius: var(--radius-pill); color: var(--steel); text-decoration: none; transition: background-color var(--dur) var(--spring), color var(--dur) var(--spring); }
@@ -130,6 +130,3 @@ select { width: 100%; min-width: 0; min-height: 52px; padding: 0 1rem; font: inh
 }
 
 
-
-/* font test: headings */
-h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; }
